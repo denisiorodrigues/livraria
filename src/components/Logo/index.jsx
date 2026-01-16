@@ -1,4 +1,4 @@
-import './estilo.css'
+import './style.css'
 import logo from '../../images/logo.svg'
 
 function Logo() {
