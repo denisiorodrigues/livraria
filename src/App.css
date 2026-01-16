@@ -1,0 +1,9 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(90deg, rgb(7, 7, 80) 35%, rgb(1, 96, 240) 165%);
+}
+
+.app-header {
+  background-color: #FFF;
+}
