@@ -46,8 +46,6 @@ const ResultadoLivros = styled.div `
 function Pesquisa() {
     const [livrosPesquisados, setLivrosPesquisados ] = useState([]) 
 
-    console.log(livrosPesquisados)
-
     return (
         <>
             <PesquisaContainer>

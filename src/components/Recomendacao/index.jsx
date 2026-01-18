@@ -33,7 +33,7 @@ const Botao = styled.button`
 `
 
 function Recomendacoes({titulo, subtitulo, descricao, img}) {
-    console.log(titulo, subtitulo, descricao, img)
+
     return (
         <Card>
             <div>
