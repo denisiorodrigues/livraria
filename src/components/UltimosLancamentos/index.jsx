@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 import Titulo from "../Titulo";
+import Recomendacao from "../Recomendacao"
 
-import { livros } from "../Pesquisa/dadosPesquisa"; 
+import { livros } from "./dadosUltimosLancamentos"; 
+import { livrosRecomendados } from "./dadosLivrosRecomendados"; 
 
 const Conteudo = styled.section `
     background-color: #EBECEE;
@@ -11,7 +13,7 @@ const Conteudo = styled.section `
     flex-direction: column;
 `
 
-const ConteudoDosLIvros = styled.div`
+const ConteudoDosLivros = styled.div`
     margin-top: 30px;
     display: flex;
     width: 100%;
@@ -19,19 +21,35 @@ const ConteudoDosLIvros = styled.div`
     cursor: pointer;
 `
 
+const ConteudoRecomendacoes = styled.div`
+     display: flex;
+    flex-direction: column;
+    gap: 10px;  
+`
+
 function UltimosLancamentos() {
     return (
         <Conteudo>
             <Titulo
-                cor="#000"
-                tamanhoDaFonte = "18px"
-                alinhamentoDaFonte = "left"
+                cor="#388f44ff"
+                tamanhoFonte = "36px"
             >ÚLTIMOS LANÇAMENTOS</Titulo>
-            <ConteudoDosLIvros>
+            <ConteudoDosLivros>
                 { livros.map(livro => (
                     <img key={livro.id} src={livro.src} alt="Imagem do livro" />
                 ))}
-            </ConteudoDosLIvros>
+            </ConteudoDosLivros>
+            <Titulo tamanhoFonte="36px">Talvez você se interesse por</Titulo>
+            <ConteudoRecomendacoes>
+                { livrosRecomendados.map(livro => (
+                    <Recomendacao key={livro.id}
+                        titulo={livro.titulo}
+                        subtitulo={livro.subtitulo}
+                        descricao={livro.descricao}
+                        img ={livro.src}/>
+                ))}
+            
+            </ConteudoRecomendacoes>
         </Conteudo>
     )
 }

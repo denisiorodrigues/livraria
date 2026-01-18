@@ -5,8 +5,8 @@ const Titulo = styled.h2`
     padding: 30px 0;
     background-color: #FFF;
     color: ${props => props.cor || '#EB9B00'};
-    font-size: ${props => props.tamanhoDaFonte || '36px'};
-    text-align: ${props => props.alinhamentoDoTexto || 'center'};
+    font-size: ${props => props.tamanhoFonte || '36px'};
+    text-align: ${props => props.alinhamentoTexto || 'center'};
     margin: 0;
 `
 
