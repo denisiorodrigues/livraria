@@ -7,10 +7,11 @@ const Icone = styled.li`
   display: flex;
   align-items: center;
 `
-
+ 
 const Icones = styled.ul`
   display: flex;
   align-items: center;
+  gap: 20px;
 `
 
 const iconesDeMenu = [lupa, sacola]
