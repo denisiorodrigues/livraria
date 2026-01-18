@@ -65,7 +65,7 @@ function Pesquisa() {
                 { livrosPesquisados.map(livro => (
                     <ResultadoLivros>
                         <p>{livro.nome}</p>
-                        <img src={livro.src} alt="Capa do livro" />
+                        <img key={livro.id} src={livro.src} alt="Capa do livro" />
                     </ResultadoLivros>
                 ))}
             </PesquisaContainer>

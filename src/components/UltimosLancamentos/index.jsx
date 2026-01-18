@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Titulo from "../Titulo";
+
 import { livros } from "../Pesquisa/dadosPesquisa"; 
 
 const Conteudo = styled.section `
@@ -7,16 +9,6 @@ const Conteudo = styled.section `
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
-`
-
-const Titulo = styled.h2`
-    width: 100%;
-    padding: 30px 0;
-    background-color: #FFF;
-    color: #EB9B00;
-    font-size: 36px;
-    text-align: center;
-    margin: 0;
 `
 
 const ConteudoDosLIvros = styled.div`
@@ -30,10 +22,14 @@ const ConteudoDosLIvros = styled.div`
 function UltimosLancamentos() {
     return (
         <Conteudo>
-            <Titulo>ÚLTIMOS LANÇAMENTOS</Titulo>
+            <Titulo
+                cor="#000"
+                tamanhoDaFonte = "18px"
+                alinhamentoDaFonte = "left"
+            >ÚLTIMOS LANÇAMENTOS</Titulo>
             <ConteudoDosLIvros>
                 { livros.map(livro => (
-                    <img src={livro.src} alt="Imagem do livro" />
+                    <img key={livro.id} src={livro.src} alt="Imagem do livro" />
                 ))}
             </ConteudoDosLIvros>
         </Conteudo>
