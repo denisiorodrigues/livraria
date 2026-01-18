@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
-import { CreateGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyled = CreateGlobalStyle`
+const GlobalStyled = createGlobalStyle`
    :root {
       font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
       line-height: 1.5;
