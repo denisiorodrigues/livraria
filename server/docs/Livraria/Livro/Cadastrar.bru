@@ -1,0 +1,24 @@
+meta {
+  name: Cadastrar
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BaseURL}}/livros
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "Autor": "Frank Herbert",
+      "Genero": "Ficção Científica",
+      "Descricao": "Uma jornada épica em um planeta desértico onde famílias nobres lutam pelo controle da substância mais valiosa do universo."
+    }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
